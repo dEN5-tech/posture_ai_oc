@@ -46,7 +46,7 @@ jobs:
           args: --release --target ${{ matrix.target }}
 
       - name: Upload Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: ${{ matrix.artifact_name }}
           path: target/${{ matrix.target }}/release/posture_ai_oc${{ matrix.os == 'windows-latest' && '.exe' || '' }}
@@ -59,13 +59,13 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Download Artifacts
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           path: artifacts
 
       - name: Create Release
         id: create_release
-        uses: actions/create-release@v1
+        uses: softprops/action-gh-release@v2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
@@ -75,31 +75,28 @@ jobs:
           prerelease: false
 
       - name: Upload Linux Binary
-        uses: actions/upload-release-asset@v1
+        uses: softprops/action-gh-release@v2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: artifacts/posture_ai_oc-linux/posture_ai_oc
+          files: artifacts/posture_ai_oc-linux/posture_ai_oc
           asset_name: posture_ai_oc-linux
           asset_content_type: application/octet-stream
 
       - name: Upload Windows Binary
-        uses: actions/upload-release-asset@v1
+        uses: softprops/action-gh-release@v2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: artifacts/posture_ai_oc-windows.exe/posture_ai_oc.exe
+          files: artifacts/posture_ai_oc-windows.exe/posture_ai_oc.exe
           asset_name: posture_ai_oc-windows.exe
           asset_content_type: application/octet-stream
 
       - name: Upload macOS Binary
-        uses: actions/upload-release-asset@v1
+        uses: softprops/action-gh-release@v2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: artifacts/posture_ai_oc-macos/posture_ai_oc
+          files: artifacts/posture_ai_oc-macos/posture_ai_oc
           asset_name: posture_ai_oc-macos
           asset_content_type: application/octet-stream
