@@ -19,8 +19,8 @@ Posture AI is a desktop application that runs in the background and uses your we
 ## 📸 Screenshots
 
 <!-- Add screenshots here -->
-![Debug Window](https://via.placeholder.com/600x400) <!-- Replace with actual screenshot -->
-![System Tray](https://via.placeholder.com/200x100) <!-- Replace with actual screenshot -->
+![Debug Window](https://dl.dropboxusercontent.com/scl/fi/h70wpj1ruf7az8yevqmkk/posture_ai_oc_wzP72xcYBU.png?rlkey=wry2kkvfdrr88fs808mlohvpx&dl=0) <!-- Replace with actual screenshot -->
+![System Tray](https://dl.dropboxusercontent.com/scl/fi/9xlshikhhy8pdki6xh1ph/UFY5cznJe9.png?rlkey=h9fd4yauqoqqtxhdpb1lu1vnx&dl=0) <!-- Replace with actual screenshot -->
 
 ## 🛠️ Requirements
 
