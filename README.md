@@ -1,6 +1,6 @@
 # Posture AI - Open Camera
 
-![Posture AI Logo](https://via.placeholder.com/150) <!-- Replace with actual logo -->
+![Posture AI Logo](https://dl.dropboxusercontent.com/scl/fi/zsanv1h36iuaxtwkoqzxd/Generated_Image_January_11__2026_-_6_34PM-removebg-preview.png?rlkey=erqh1sb0f2xe4kz875xp9xe1b&dl=0) <!-- Replace with actual logo -->
 
 A real-time posture detection application that uses computer vision to monitor your posture and provide visual feedback when you slouch.
 
