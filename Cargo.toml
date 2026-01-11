@@ -1,0 +1,40 @@
+[package]
+name = "posture_ai_oc"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# 1. Inference
+ort = { version = "2.0.0-rc.9", features = ["ndarray"] } 
+ndarray = "0.16.1"
+
+# 2. Webcam
+nokhwa = { version = "0.10.10", features = ["input-native", "output-threaded"] }
+
+# 3. Image
+image = "=0.25.5"
+
+# 4. GUI (Camera Window)
+minifb = "0.27.0"
+
+# 5. System Tray
+tray-icon = "0.14.3"
+anyhow = "1.0.100"
+
+# 6. Async Runtime
+tokio = { version = "1.0", features = ["full"] }
+futures = "0.3"
+rand = "0.8"
+
+# 6. Windows API
+[dependencies.windows]
+version = "0.52.0"
+features = [
+    "Win32_Foundation",
+    "Win32_UI_WindowsAndMessaging",
+    "Win32_Graphics_Gdi",
+    "Win32_System_LibraryLoader",
+]
+
+# 7. Utils
+anyhow = "1.0"

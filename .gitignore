@@ -1,0 +1,34 @@
+# Rust specific
+/target
+/debug
+/release
+
+# Cargo files
+Cargo.lock
+
+# IDE specific
+/.vscode/
+/.idea/
+*.swp
+*.swo
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Build artifacts
+*.exe
+*.dll
+*.so
+*.dylib
+*.a
+
+# ONNX model (large binary file)
+/movenet_singlepose_thunder.onnx
+
+# Environment files
+.env
+*.env
+
+# Log files
+*.log
